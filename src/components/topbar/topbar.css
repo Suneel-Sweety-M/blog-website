@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+i{
+    cursor: pointer;
+}
+
+/*===NAVBAR===*/
+.top{
+    width: 100vw;
+    height: 50px;
+    background-color: aqua;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: Lora;
+    z-index: 10;
+}
+.topLeft, .topRight{
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+.logo{
+    cursor: pointer;
+}
+.topLeft i{
+    font-size: 30px;
+    color: orange;
+}
+.topLeft h2 span{
+    color: white;
+}
+.topLeft h2{padding-left: 10px;}
+.topCenter{
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topCenter .topList{
+    display: flex;
+}
+.topCenter .topList .topListItem{
+    padding: 0px 10px;
+}
+.topCenter .topList .topListItem:hover{
+    color: orange;
+}
+.topImg{
+    border-radius: 50%;
+    cursor: pointer;
+}
+.fa-magnifying-glass{
+    font-size: 20px;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.fa-bars, .fa-close{
+    display: none;
+}
+
+@media (max-width:750px) {
+    .fa-bars, .fa-close{
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        background-color: aqua;
+        padding: 10px;
+        transition: 0.5s;
+    }
+    .top{
+        display: none;
+    }
+    .top-m{
+        width: 90vw;
+        display: block;
+        font-size: 25px;
+        height: 50vh;
+        position: fixed;
+        top: 0;left: 0;
+        z-index: 999;
+        transition: 1s;
+        background-color: aqua;
+    }
+    .top-m .topCenter .topList{
+        display: block;
+    }
+    .top-m .topCenter .topList .topListItem{
+        padding: 20px 0;
+    }
+}
